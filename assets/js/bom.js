@@ -11,50 +11,15 @@ Good Luck !!!
 
 
 
-
 // Define UI Variables  here 
 
-const taskInput = document.querySelector('#task');
-const form = document.querySelector('#task-form');
-const filter = document.querySelector('#filter');
-const taskList = document.querySelector('.collection');
-const clearBtn = document.querySelector('.clear-tasks');
-
-//Add Event Listener [for the form, clearBtn & filter search input]
-form.addEventListener('submit', addNewTask);
-clearBtn.addEventListener('click', clearAllTasks);
-filter.addEventListener('keyup', filterTasks)
-
-//Addition, Clearing and Filter tasks function definition
-function addNewTask(e){
-    
-    if(taskInput.value === '')
-    {
-    alert('Enter New Task ...');
-
-    return;
-    }
-    // Adding and Removing HTML Elements
-    const li = document.createElemen('li');
-    li.className = 'collection-item';
-    li.appendChild(document.createTextNode(taskInput.value));
-    const link = document.createElement('a');
-    link.className = 'delete-item secondary-content';
-    link.innerHTML = <i class = "fa fa-remove"></i>
-    li.appendChild(link);
-    taskList.appendChild(li);
 
 
-    e.preventDefault(); 
-}
-
-function clearAllTasks(){
-    alert("Clear tasks ...");
-    taskList.innerHTML = '';
-}
-
-function filterTasks(e){
-    Console.log("Task Filter ...");
-}
 
 // Display the BOM Information on the innerHTML of the elements
+var header = document.getElementById('main-header');
+header.style.borderBottom = 'solid 3px #000';
+var tasks = document.getElementsByClassName('collection-item');
+for (var i = 0; i < tasks.length; i++){
+    tasks[i].style.backgroundColor = '#f4f4f4'
+}
