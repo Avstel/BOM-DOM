@@ -33,6 +33,7 @@ function addNewTask(e) {
     // Check empty entry
     if (taskInput.value === '') {
         taskInput.style.borderColor = "red";
+        alert('Enter New Task ...');
 
         return;
     }
