@@ -111,6 +111,10 @@ function filterTasks(e) {
     
 }
 
+// Adding a dropdown section
+
+
+
 // Remove Task function definition 
 function removeTask(e) {
     if (e.target.parentElement.classList.contains('delete-item')) {
