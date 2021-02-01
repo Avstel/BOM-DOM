@@ -1,3 +1,6 @@
 i {
     color: red;
 }
+#filter li a:hover:not(.main-header){
+    background-color: #eeee;
+}

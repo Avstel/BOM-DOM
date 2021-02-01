@@ -41,7 +41,7 @@ function addNewTask(e) {
     // Create an li element when the user adds a task 
     const li = document.createElement('li');
     // Adding a class
-    li.className = 'collection-item';
+    li.className = 'collection';
     // Create text node and append it 
     li.appendChild(document.createTextNode(taskInput.value));
     // Create new element for the link 
@@ -85,7 +85,7 @@ function filterTasks(e) {
     Instruction for Handling the Search/filter 
     
     1. Receive the user input from the text input 
-    2. Assign it to a variable so the us can reuse it 
+    2. Assign it to a variable we can reuse it 
     3. Use the querySelectorAll() in order to get the collection of li which have  .collection-item class 
     4. Iterate over the collection item Node List using forEach
     5. On each element check if the textContent of the li contains the text from User Input  [can use indexOf]
@@ -93,7 +93,22 @@ function filterTasks(e) {
     
     
     */
-
+   var input, filter, ul, list, a, i, txtValue;
+   input = e.getElementById('filter');
+   filter = input.value.toLowerCase();
+   ul = e.getElementsByClassName('collection')
+   list = ul.getElementsByTagName('li');
+   //looping stage
+   for(i = 0; i < list.length; i++){
+       a = list[i].getElementsByTagName("a")[0];
+       txtValue = a.textContent || a.innerText;
+       if (txtValue.toLowerCase().indexOf(filter) > -1){
+           list[i].style.display = "";
+       }else{
+           list[i].style.display = "none";
+       }
+   }
+    
 }
 
 // Remove Task function definition 

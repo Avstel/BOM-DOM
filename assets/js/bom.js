@@ -8,12 +8,20 @@ Follow the Instruction on the comments
 Adding Extra is Possible if you want to explore more ...
 Good Luck !!! 
 */
-
-
+/* test test var newDiv = document.createElement('div')
+newDiv.className = 'hello';
+newDiv.id = 'hello1';
+newDiv.setAttribute('title', 'Hello world');
+newDiv.appendChild(newDivText);
+console.log(newDiv);
+*/
 
 // Define UI Variables  here 
-
-
+const reloadIcon = document.querySelector('.fa');
+reloadIcon.addEventListener('click',reloadPage);
+function reloadPage(){
+    location.reload();
+}
 
 
 // Display the BOM Information on the innerHTML of the elements
