@@ -49,21 +49,21 @@ document.getElementById("hn").innerHTML = "Host-name is " + window.location.host
 //Browser Information
 
 //height = screen.height(height);
-document.getElementById("app").innerHTML = "Appname";
-document.getElementById("apv").innerHTML = "App Version";
-document.getElementById("pf").innerHTML = "platform";
-document.getElementById("la").innerHTML = "Language";
-document.getElementById("ce").innerHTML = "Cookie Enabled";
+document.getElementById("app").innerHTML = "Appname is: " + navigator.appName;
+document.getElementById("apv").innerHTML = "App Version is: " + navigator.appVersion;
+document.getElementById("pf").innerHTML = "platform is " +  + navigator.platform;
+document.getElementById("la").innerHTML = "Language is "+  + navigator.language;
+document.getElementById("ce").innerHTML = "Cookie Enabled is" +  + navigator.cookieEnabled;;
 
 //Screen Information
 
 //height = screen.height(height);
-document.getElementById("he").innerHTML = "height";
-document.getElementById("we").innerHTML = "weight";
+document.getElementById("he").innerHTML = "height is "  + window.innerHeight + " pixels";
+document.getElementById("we").innerHTML = "weight "  + window.innerWidth + " pixels";
 document.getElementById("pi").innerHTML = "pixel Density";
 
 //Browsing History Information
 
 //height = screen.height(height);
-document.getElementById("len").innerHTML = "length";
-document.getElementById("stat").innerHTML = "state";
+document.getElementById("len").innerHTML = "length " + window.length;
+document.getElementById("stat").innerHTML = "The State is: " + window.ValidityState;
