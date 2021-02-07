@@ -29,6 +29,10 @@ var height = document.getElementById("main-header")
 var width = document.getElementsByName('Width');
 //var PixelDepth = document.getElementById();
 
+// Adding a dropdown section
+
+
+
 ///////////////////Functions/////////////////////
 reloadIcon.addEventListener('click',reloadPage);
 function reloadPage(){
@@ -59,7 +63,7 @@ document.getElementById("ce").innerHTML = "Cookie Enabled is" +  + navigator.coo
 
 //height = screen.height(height);
 document.getElementById("he").innerHTML = "height is "  + window.innerHeight + " pixels";
-document.getElementById("we").innerHTML = "weight "  + window.innerWidth + " pixels";
+document.getElementById("we").innerHTML = "width is "  + window.innerWidth + " pixels";
 document.getElementById("pi").innerHTML = "pixel Density";
 
 //Browsing History Information

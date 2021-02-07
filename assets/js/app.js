@@ -95,22 +95,23 @@ function filterTasks(e) {
     */
    var input, filter, ul, list, a, i, txtValue;
    input = e.getElementById('filter');
-   filter = input.value.toLowerCase();
-   ul = e.getElementsByClassName('collection')
+   filter = input.value.toUpperCase();
+   ul = e.getElementById("id01");
    list = ul.getElementsByTagName('li');
    //looping stage
    for(i = 0; i < list.length; i++){
-       a = list[i].getElementsByTagName("a")[0];
+       a = list[i].getElementsByTagName('li')[0];
        txtValue = a.textContent || a.innerText;
-       if (txtValue.toLowerCase().indexOf(filter) > -1){
+       if (txtValue.toUpperCase().indexOf(filter) > -1){
            list[i].style.display = "";
        }else{
-           list[i].style.display = "none";
+           list[i].style.display =  e.list[i].remove();;
        }
    }
     
 }
 
+link.className = 'search btn';
 // Adding a dropdown section
 
 
